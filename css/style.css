@@ -1,0 +1,768 @@
+@charset "utf-8";
+
+/* O・K・A・K・IサイトCSS */
+body {
+  font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+hr {
+  width: 100%;
+}
+
+/* 紙吹雪 */
+html, body {
+  height: 100%;
+  /*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js {
+  position: fixed;
+  /*描画固定*/
+  z-index: -1;
+  /*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  /*背景色*/
+}
+
+/*==================================================
+O・K・A・K・I HP mobile-width
+===================================*/
+.wrapper {
+  box-shadow: 0 0 5px 3px rgba(153, 150, 147, 0.7);
+  padding: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-image: url(../image/about_background1.png), url(../image/about_background2.png), url(../image/about_background3.png), url(../image/about_background4.png);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top 640px left 84px, top 1370px left -97px, top 1778px left 129px, top 2481px left -75px;
+  background-color: #FFF7EE;
+}
+
+/*==================================================
+header
+===================================*/
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  width: 48rem;
+  height: 7.955rem;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #FF553C;
+  font-weight: 200;
+  padding-left: 1.5rem;
+  padding-top: 0.95rem;
+}
+
+/*==================================================
+ハンバーガーメニュー
+===================================*/
+.openbtn {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  z-index: 999999;
+}
+
+.openbtn span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #FF553C;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/* ナビゲーション */
+#g-nav {
+  position: fixed;
+  z-index: 99999;
+  top: -180%;
+  width: 480px;
+  height: 100%;
+  background: #DBAA85;
+  transition: all 0.9s;
+}
+
+#g-nav.panelactive {
+  top: 0;
+}
+
+#g-nav ul {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+#g-nav li {
+  list-style: none;
+  text-align: center;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+#g-nav li a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 3.5rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 3rem;
+}
+
+.a_top {
+  margin-top: 100px;
+}
+
+img.twitter {
+  margin-right: 20px;
+}
+
+img.instagram {
+  margin-left: 20px;
+}
+
+/*==================================================
+first_view
+===================================*/
+.first_view {
+  width: 100%;
+}
+
+.first_view img {
+  width: 100%;
+  background-size: cover;
+  margin-top: 79.55px;
+  height: 100%;
+}
+
+/*==================================================
+about
+===================================*/
+.about {
+  text-align: center;
+}
+
+h2.about_title {
+  margin-bottom: 3rem;
+  margin-top: 6rem;
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.about_title img {
+  width: 100%;
+  height: 100%;
+}
+
+.about p {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  line-height: 3;
+  font-size: 1.8rem;
+}
+
+/*==================================================
+image_section
+===================================*/
+.image_section {
+  position: relative;
+}
+
+.photo_1 {
+  padding-left: 2rem;
+  margin-top: 6rem;
+}
+
+
+.photo_1 img+img {
+  position: absolute;
+  top: -6.3%;
+  right: -18%;
+}
+
+.photo_2 {
+  text-align: right;
+  margin-top: 6rem;
+}
+
+.photo_2 img+img {
+  position: absolute;
+  top: 27%;
+  right: 17%;
+}
+
+.photo_3 {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.photo_4 {
+  text-align: left;
+  margin-top: 6rem;
+}
+
+.photo_4 img+img {
+  position: absolute;
+  top: 61%;
+  right: 2%;
+}
+
+.photo_5 {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+/*==================================================
+映像作品
+===================================*/
+.movie {
+  text-align: center;
+}
+
+h2.movie_title {
+  background-image: url(../image/namisen.svg);
+  background-repeat: no-repeat;
+  margin-top: 13rem;
+  padding: 60px 0 75px;
+}
+
+/* 映像作品ホバーしたら半透明に */
+.movie_link img {
+  transition: 1.0s;
+}
+
+.movie_link img:hover {
+  opacity: 0.5;
+}
+
+h2.product_title {
+  background-image: url(../image/namisen.svg);
+  background-repeat: no-repeat;
+  margin-top: 13rem;
+  padding: 60px 0 0;
+}
+
+.movie_sub_title {
+  /* font-size: 1.8rem; */
+  text-align: left;
+  margin-left: 1.8rem;
+  margin-top: 3.5rem;
+  margin-bottom: 6rem;
+}
+
+.movie_sentence {
+  /* font-family: 'Zen Kaku Gothic Antique', sans-serif; */
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+  margin: 0 1.8rem;
+  text-align: justify;
+}
+
+.movie_sentence p+p {
+  margin-top: 5rem;
+}
+
+.movie_image2 {
+  margin-top: 120px;
+}
+
+/*==================================================
+商品紹介
+===================================*/
+.product {
+  position: relative;
+}
+
+.product1_image1 {
+  background-image: url(../image/product_image1-1.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 135px;
+  width: 100%;
+  height: 100%;
+}
+
+.product1_image1 img+img {
+  position: absolute;
+  top: 23%;
+  right: 9%;
+}
+
+.product1_image2 {
+  background-image: url(../image/product_image1-1.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 135px;
+  width: 100%;
+  height: 100%;
+}
+
+.product1_image2 img+img {
+  position: absolute;
+  top: 64%;
+  right: 9%;
+}
+
+.product_character {
+  margin-top: 6rem;
+}
+
+.product2 {
+  margin-top: 4.5rem;
+}
+
+.online_button {
+  width: 247px;
+  height: 62px;
+  background-color: #DBAA85;
+  border-radius: 8px;
+  margin: 6rem auto 0rem;
+  box-shadow: 4px 4px 0px gray;
+  padding: 0;
+  border-width: 0px;
+}
+
+.online_button a {
+  display: block;
+  line-height: 73px;
+  width: 100%;
+}
+
+.online_button:active {
+  transform: translate(4px, 4px);
+  /* 右下の移動させて凹むような動きを付ける */
+  box-shadow: 0px 0px 0px gray;
+}
+
+/*==================================================
+お知らせ
+===================================*/
+.news_dl {
+  font-size: 1.8rem;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.news_dt {
+  text-align: left;
+  margin-left: 45px;
+  margin-bottom: 2rem;
+}
+
+.news_dd {
+  border-bottom: 1px solid #000;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/*==================================================
+店舗紹介
+===================================*/
+.shop_sub_title {
+  text-align: left;
+  margin-left: 45px;
+  font-size: 2.3rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  font-family: hot-soshokk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.shop_dl {
+  font-size: 1.8rem;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.shop_dt {
+  text-align: left;
+  margin-left: 45px;
+}
+
+.shop_dd {
+  border-bottom: 1px solid #000;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+/*==================================================
+お問い合わせ
+===================================*/
+.contact {
+  font-size: 1.8rem;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.contact_item1 {
+  text-align: left;
+  margin-left: 45px;
+  margin-bottom: 15px;
+}
+
+.contact_item2 {
+  margin-bottom: 50px;
+}
+
+input {
+  width: 80%;
+  height: 35px;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 1.8rem;
+}
+
+
+.retro_btn {
+  margin-top: 6rem;
+}
+
+.retro_btn1 {
+  width: 247px;
+  height: 62px;
+  background-color: #DBAA85;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px gray;
+  cursor: pointer;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+/* ボタンが押されている時 */
+
+.retro_btn1:active {
+  transform: translate(4px, 4px);
+  /* 右下の移動させて凹むような動きを付ける */
+  box-shadow: 0px 0px 0px gray;
+}
+
+/*==================================================
+footer
+===================================*/
+footer {
+  background-color: #FF553C;
+  color: #fff;
+}
+
+.footer_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 35px;
+  margin-top: 190px;
+}
+
+h2.footer_h2 {
+  font-size: 2.7rem;
+  margin-left: 18px;
+  font-family: hot-soshokk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer_icon {
+  margin-right: 18px;
+}
+
+.twitter_icon {
+  margin-right: 20px;
+}
+
+.footer_list {
+  width: 390px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_menu {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+.footer_menu li {
+  padding: 0 3%;
+}
+
+.footer_menu li+li {
+  border-left: 1px solid #fff;
+}
+
+.footer_list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+hr {
+  height: 1px;
+  background-color: #fff;
+  border: none;
+  width: 92.8%;
+}
+
+small {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 40px;
+}
+
+/*==================================================
+最初にロゴ
+===================================*/
+.start {
+  background-color: #FFF7EE;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+}
+
+.start p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+}
+
+.start img {
+  width: 100%;
+  height: 100%;
+}
+
+/*==================================================
+レスポンシブ用のメディアクエリ
+===================================*/
+
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+    height: auto;
+    background-position: top 531px left 24px, top 1193px left -105px, top 1594px left 73px, top 2156px left -58px;
+    ;
+  }
+
+  header {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* header img {
+    width: 100%;
+  } */
+
+  #g-nav {
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position: fixed;
+    z-index: 99999;
+    /*ナビのスタート位置と形状*/
+    top: -180%;
+    width: 100%;
+    height: 100%;
+    /*ナビの高さ*/
+    background: #DBAA85;
+    /*動き*/
+    transition: all 0.9s;
+  }
+
+  .particles-js-canvas-el {
+    display: none;
+    max-width: 0%;
+  }
+
+  .photo_1 {
+    padding: 0;
+  }
+
+  .image_section img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .photo_1 {
+    width: 72.5%;
+    height: auto;
+    padding-left: 4, 2%;
+    padding-left: 4.16%;
+  }
+
+  .photo_1 img+img {
+    position: absolute;
+    top: -50%;
+    right: -26%;
+  }
+
+  .photo_2 {
+    width: 52.5%;
+    height: auto;
+    padding-left: 47.5%;
+
+  }
+
+  .photo_2 img+img {
+    position: absolute;
+    top: -11%;
+    right: 14%;
+  }
+
+  .photo_3 {
+    width: 92.5%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .photo_4 {
+    width: 68.5%;
+  }
+
+  .photo_4 img+img {
+    position: absolute;
+    top: 25%;
+    right: 3%;
+  }
+
+  .photo_5 {
+    width: 58.3%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .movie_image1 img, .shop_image img, .movie_image2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product1_image1 img+img {
+    position: absolute;
+    top: 23%;
+    right: 1%;
+  }
+
+  .product1_image2 img+img {
+    position: absolute;
+    top: 66%;
+    right: 0%;
+  }
+
+  .footer_list {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer_menu {
+    display: flex;
+    width: 100%;
+    margin-left: 8%;
+  }
+
+  .footer_list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  /*==================================================
+   Google Mapレスポンシブ
+   ===================================*/
+  .map {
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    padding-top: 56.25%;
+  }
+
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+/*==================================================
+汎用CSS
+===================================*/
+.is_center {
+  text-align: center;
+}
